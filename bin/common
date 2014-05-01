@@ -80,12 +80,12 @@ function package_resolve_version() {
 }
 
 function package_download() {
-  engine="$1"
+  package="$1"
   version="$2"
   location="$3"
 
   mkdir -p $location
-  package="http://${S3_BUCKET}.s3.amazonaws.com/$engine-$version.tgz"
+  #package="http://${S3_BUCKET}.s3.amazonaws.com/$engine-$version.tgz"
   curl $package -s -o - | tar xzf - -C $location
 }
 
