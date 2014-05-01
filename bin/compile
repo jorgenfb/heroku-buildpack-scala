@@ -76,9 +76,9 @@ CACHE_STORE_DIR="$CACHE_DIR/$UI_FILES/node_modules/$NODE_VERSION/$NPM_VERSION"
 CACHE_TARGET_DIR="$BUILD_DIR/$UI_FILES/node_modules"
 
 # s3 packages
-NODE_PACKAGE="http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.gz"
+NODE_PACKAGE="http://nodejs.org/dist/v${NODE_VERSION}/pkgsrc/nodejs-x64-${NODE_VERSION}.tgz"
 NPM_PACKAGE="http://nodejs.org/dist/npm/npm-${NPM_VERSION}.tgz"
-SCONS_PACKAGE="http://prdownloads.sourceforge.net/scons/scons-${SCONS_VERSION}.tar.gz"
+SCONS_PACKAGE="http://${S3_BUCKET}.s3.amazonaws.com/scons-${SCONS_VERSION}.tgz"
 
 # vendor directories
 VENDORED_NODE="$(mktmpdir node)"
